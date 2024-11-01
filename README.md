@@ -1,4 +1,4 @@
-- 👋 Hi, I’m @TeachMastermindPat1
+- 👋 Hi, I’m @TeachMastermindPat
 - 👀 I’m interested in ...
 - 🌱 I’m currently learning ...
 - 💞️ I’m looking to collaborate on ...
@@ -7,7 +7,7 @@
 - ⚡ Fun fact: ...
 
 <!---
-TeachMastermindPat1/TeachMastermindPat1 is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+TeachMastermindPat/AfricaCryptoChainx is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 You can click the Preview link to take a look at your changes.
 ---># To get started with Dependabot version updates, you'll need to specify which
 # package ecosystems to update and where the package manifests are located.
