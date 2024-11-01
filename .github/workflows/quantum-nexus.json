@@ -1,0 +1,70 @@
+{
+  "id": 1318349,
+  "name": "quantum-nexus",
+  "target": "branch",
+  "source_type": "Organization",
+  "source": "Africacryptochainx-Com",
+  "enforcement": "active",
+  "conditions": {
+    "repository_name": {
+      "exclude": [],
+      "include": [
+        "~ALL"
+      ]
+    },
+    "ref_name": {
+      "exclude": [],
+      "include": [
+        "~DEFAULT_BRANCH",
+        "~ALL",
+        "refs/heads/1. **Feature Branches:**     - `feature/<description>`     - Example: `feature/blockchain-integration`  2. **Bug Fixes:**     - `bugfix/<description>`    - Example: `bugfix/transaction-error`  3. **Enhancements:**     - `enhancement/<description>`    - Example: `enhancement/security-upgrade`  4. **Release Branches:**    - `release/<version>`    - Example: `release/v1.0`  5. **Hotfixes:**     - `hotfix/<description>`    - Example: `hotfix/critical-security-patch`  6. **Develop Branch:**     - `develop`     - (For ongoing development work.)  7. **Main Branch:**     - `main`     - (For the stable, production-ready code.)"
+      ]
+    }
+  },
+  "rules": [
+    {
+      "type": "deletion"
+    },
+    {
+      "type": "non_fast_forward"
+    },
+    {
+      "type": "creation"
+    },
+    {
+      "type": "update"
+    }
+  ],
+  "bypass_actors": [
+    {
+      "actor_id": 2,
+      "actor_type": "RepositoryRole",
+      "bypass_mode": "always"
+    },
+    {
+      "actor_id": 4,
+      "actor_type": "RepositoryRole",
+      "bypass_mode": "always"
+    },
+    {
+      "actor_id": 5,
+      "actor_type": "RepositoryRole",
+      "bypass_mode": "always"
+    },
+    {
+      "actor_id": 10656231,
+      "actor_type": "Team",
+      "bypass_mode": "always"
+    },
+    {
+      "actor_id": 1,
+      "actor_type": "OrganizationAdmin",
+      "bypass_mode": "always"
+    },
+    {
+      "actor_id": null,
+      "actor_type": "DeployKey",
+      "bypass_mode": "always"
+    }
+  ]
+}

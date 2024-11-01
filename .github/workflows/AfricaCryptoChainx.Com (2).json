@@ -1,0 +1,31 @@
+{
+  "id": 793864,
+  "name": "AfricaCryptoChainx.Com",
+  "target": "branch",
+  "source_type": "Repository",
+  "source": "Africacryptochainx-Com/-AfricaCryptoChainx-CCXT-Wallet-Timestamp-Integration-",
+  "enforcement": "active",
+  "conditions": {
+    "ref_name": {
+      "exclude": [],
+      "include": [
+        "~ALL"
+      ]
+    }
+  },
+  "rules": [
+    {
+      "type": "deletion"
+    },
+    {
+      "type": "non_fast_forward"
+    }
+  ],
+  "bypass_actors": [
+    {
+      "actor_id": 2,
+      "actor_type": "RepositoryRole",
+      "bypass_mode": "always"
+    }
+  ]
+}

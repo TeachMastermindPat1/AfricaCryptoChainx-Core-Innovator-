@@ -1,0 +1,147 @@
+{
+  "id": 1318349,
+  "name": "quantum-nexus",
+  "target": "branch",
+  "source_type": "Organization",
+  "source": "Africacryptochainx-Com",
+  "enforcement": "active",
+  "conditions": {
+    "repository_name": {
+      "exclude": [],
+      "include": [
+        "~ALL"
+      ]
+    },
+    "ref_name": {
+      "exclude": [],
+      "include": [
+        "~DEFAULT_BRANCH",
+        "~ALL",
+        "refs/heads/1. **Feature Branches:**     - `feature/<description>`     - Example: `feature/blockchain-integration`  2. **Bug Fixes:**     - `bugfix/<description>`    - Example: `bugfix/transaction-error`  3. **Enhancements:**     - `enhancement/<description>`    - Example: `enhancement/security-upgrade`  4. **Release Branches:**    - `release/<version>`    - Example: `release/v1.0`  5. **Hotfixes:**     - `hotfix/<description>`    - Example: `hotfix/critical-security-patch`  6. **Develop Branch:**     - `develop`     - (For ongoing development work.)  7. **Main Branch:**     - `main`     - (For the stable, production-ready code.)"
+      ]
+    }
+  },
+  "rules": [
+    {
+      "type": "deletion"
+    },
+    {
+      "type": "non_fast_forward"
+    },
+    {
+      "type": "creation"
+    },
+    {
+      "type": "update"
+    },
+    {
+      "type": "commit_message_pattern",
+      "parameters": {
+        "operator": "starts_with",
+        "pattern": "testAfricaCryptoChainx  123AfricaCryptoChainx  AfricaCryptoChainx",
+        "negate": false,
+        "name": "  Metadata Restrictions for AfricaCryptoChainx  To maintain the integrity and security of the AfricaCryptoChainx project, we enforce specific metadata restrictions on all commits. These restrictions ensure that contributions align with our project standards and enhance overall quality. The following guidelines apply:  1. Author and Committer Email Addresses:  Only predefined email addresses are permitted for commit authors and committers. Ensure that your email matches one of the approved addresses before making a commit.  Unauthorized email addresses will result in a rejected commit, and you will be prompted to use an allowed email.    2. Commit Message Content:  Commit messages must adhere to specific formatting rules. The use of certain keywords (e.g., \"fix,\" \"bug,\" \"wip\") is strictly prohibited to maintain clarity and prevent ambiguity in our project's history.  Any commit message containing restricted keywords will be rejected, requiring you to revise your message accordingly.    3. Additional Metadata Checks:  Additional checks may be implemented to restrict commit timestamps, sizes, and other relevant metadata, ensuring all contributions meet our project standards.     Compliance  By adhering to these metadata restrictions, contributors help ensure the AfricaCryptoChainx project remains organized and efficient. Please refer to our project's documentation for detailed guidelines and examples of acceptable commit messages and email formats.  For any questions or clarifications regarding these restrictions, feel free to reach out to the project maintainers."
+      }
+    },
+    {
+      "type": "branch_name_pattern",
+      "parameters": {
+        "operator": "starts_with",
+        "pattern": "AfricaCryptoChainx  test  12345",
+        "negate": false,
+        "name": " Matching Pattern Description: *  The * matching pattern is a wildcard that serves as a versatile tool in various contexts, allowing for the representation of any sequence of characters, including no characters at all. This pattern is particularly useful for broad searches and flexible matching in programming, databases, and configuration files.  Key Features:  Universal Matching: The * character can match any string, regardless of length or content. This includes:  Example Matches:  AfricaCryptoChainx  test  12345  Any other string or combination of characters.    Use Cases:  Search Operations: When used in search filters, * enables users to retrieve all relevant entries without specifying exact terms.  Version Control: In systems like Git, the * wildcard can be employed to apply commands to multiple files or branches, streamlining workflows.  File Patterns: In file handling or script execution, * can represent all files within a directory, allowing for efficient batch processing.    Considerations:  While the * wildcard provides powerful matching capabilities, it should be used with caution to avoid unintentional matches. It's essential to define clear criteria or additional patterns when necessary to ensure accurate results."
+      }
+    },
+    {
+      "type": "workflows",
+      "parameters": {
+        "do_not_enforce_on_create": false,
+        "workflows": [
+          {
+            "repository_id": 791743791,
+            "path": ".github/workflows/fortify.yml",
+            "sha": "429c3343465b11e1f56d88163ab7002fcca9e285",
+            "ref": "refs/heads/main"
+          }
+        ]
+      }
+    },
+    {
+      "type": "required_linear_history"
+    },
+    {
+      "type": "required_signatures"
+    },
+    {
+      "type": "pull_request",
+      "parameters": {
+        "required_approving_review_count": 10,
+        "dismiss_stale_reviews_on_push": true,
+        "require_code_owner_review": true,
+        "require_last_push_approval": true,
+        "required_review_thread_resolution": true
+      }
+    },
+    {
+      "type": "required_status_checks",
+      "parameters": {
+        "strict_required_status_checks_policy": false,
+        "do_not_enforce_on_create": false,
+        "required_status_checks": [
+          {
+            "context": " Required Checks for AfricaCryptoChainx  Checker: TeachMastermindPat  Check 1: Code Review Use SonarQube (free tool) to analyze the code quality and ensure that best practices are followed.  sonar-scanner -Dsonar.projectKey=africacryptochainx -Dsonar.sources=. -Dsonar.host.url=http://localhost:9000 -Dsonar.login=YOUR_TOKEN  Check 2: Automated Testing Leverage GitHub Actions for running tests on every commit. Use the following YAML configuration:  name: CI  on:   push:     branches:       - main  jobs:   test:     runs-on: ubuntu-latest     steps:       - name: Checkout         uses: actions/checkout@v2        - name: Set up Node.js         uses: actions/setup-node@v2         with:           node-version: '14'        - name: Install dependencies         run: npm install        - name: Run tests         run: npm test  Check 3: Documentation Update Ensure that all documentation is up to date using a documentation generator like Docusaurus. Run the following command to build the documentation:  npm run build  Total Required Approvals: 10   Notes:  Ensure that all checks are completed before proceeding.  Use Slackbot or Discord Bot (free tools) for notifying team members about the status of checks.  Contact TeachMastermindPat for any questions regarding the checks."
+          }
+        ]
+      }
+    },
+    {
+      "type": "code_scanning",
+      "parameters": {
+        "code_scanning_tools": [
+          {
+            "tool": " Required Tools and Alert Thresholds for AfricaCryptoChainx  Required Tools:  1. SonarQube  Purpose: Code quality analysis and reporting.  Usage: Monitor code health and technical debt.  Alert Threshold: Raise an alert if code quality drops below 70%.    2. GitHub Actions  Purpose: Continuous integration and automated testing.  Usage: Run tests and deployments automatically on push or pull requests.  Alert Threshold: Fail the workflow if any tests do not pass.    3. Docusaurus  Purpose: Documentation generation and management.  Usage: Ensure documentation is generated and up-to-date.  Alert Threshold: Notify if documentation build fails or is out of sync with the latest code changes.    4. Slackbot or Discord Bot  Purpose: Team communication and notifications.  Usage: Send alerts and updates to team channels regarding project status and required checks.  Alert Threshold: Trigger notifications for any failed checks or thresholds.    5. Postman  Purpose: API testing and monitoring.  Usage: Test API endpoints to ensure functionality and performance.  Alert Threshold: Raise an alert for any API response time exceeding 200ms or failure in test cases.     Alert Management:  Notification Method: Use Slack or Discord to send alerts to the team.  Frequency: Alerts should be sent in real-time for critical failures and daily summaries for non-critical issues.",
+            "security_alerts_threshold": "high_or_higher",
+            "alerts_threshold": "errors"
+          },
+          {
+            "tool": "CodeQL",
+            "security_alerts_threshold": "high_or_higher",
+            "alerts_threshold": "errors"
+          }
+        ]
+      }
+    }
+  ],
+  "bypass_actors": [
+    {
+      "actor_id": 2,
+      "actor_type": "RepositoryRole",
+      "bypass_mode": "always"
+    },
+    {
+      "actor_id": 4,
+      "actor_type": "RepositoryRole",
+      "bypass_mode": "always"
+    },
+    {
+      "actor_id": 5,
+      "actor_type": "RepositoryRole",
+      "bypass_mode": "always"
+    },
+    {
+      "actor_id": 10656231,
+      "actor_type": "Team",
+      "bypass_mode": "always"
+    },
+    {
+      "actor_id": 1,
+      "actor_type": "OrganizationAdmin",
+      "bypass_mode": "always"
+    },
+    {
+      "actor_id": null,
+      "actor_type": "DeployKey",
+      "bypass_mode": "always"
+    }
+  ]
+}
